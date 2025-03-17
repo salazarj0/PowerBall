@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Powerball</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #f7f7f7;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo img {
+            height: 70px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 19px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            background: rgb(229, 230, 230);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .numbers span {
+            display: inline-block;
+            background: #d3d3d3;
+            color: rgb(5, 5, 5);
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .numbers .red {
+    background: #c8102e;
+    color: white; /* Hace que solo el número 11 sea blanco */
+}
+
+.powerplay, .results, .check {
+    background: #23272A; /* Color oscuro como en la imagen */
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Tamaño adecuado */
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px;
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    transition: background 0.3s ease-in-out;
+}
+
+.powerplay:hover, .results:hover, .check:hover {
+    background: #0a0c0d; /* Efecto de hover más oscuro */
+}
+
+        
+        .jackpot span, .cash-value span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .winner {
+            color: green;
+        }
+        .no-winner {
+            color: red;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .box {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Powerball Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="#">Resultados</a></li>
+                <li><a href="#">Más</a></li>
+                <li><a href="#">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="container">
+            <div class="box">
+                <h2>Números Ganadores</h2>
+                <p>sáb, mar 15, 2025</p>
+                <div class="numbers">
+                    <span>12</span><span>17</span><span>22</span><span>36</span><span>43</span>  <span class="red" >11</span>
+                </div>
+                <button class="powerplay">Power Play 3x</button>
+                <button class="results">Ver los resultados</button>
+                <button class="check">Compruebe sus números</button>
+            </div>
+            <div class="box">
+                <h2>Próximo Sorteo</h2>
+                <p>lun, mar 17, 2025</p>
+                <p class="jackpot">Gran Premio Estimado<br><span>$398 Millones</span></p>
+                <p class="cash-value">Valor en Efectivo<br><span>$185.7 Millones</span></p>
+            </div>
+            <div class="box">
+                <h2>Ganadores</h2>
+                <p>sáb, mar 15, 2025</p>
+                <p><strong>Powerball</strong><br>Ganadores del Gran Premio: <span class="no-winner">Nadie</span></p>
+                <p><strong>Pareja 5 + Power Play</strong><br>Ganadores de $2 Millones: <span class="winner">TX</span></p>
+                <p><strong>Pareja 5</strong><br>Ganadores de $1 Millón: <span class="winner">MA</span></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
